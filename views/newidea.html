@@ -1,0 +1,47 @@
+<textarea placeholder="Your idea.." class="input-large" rows="3" ng-model="idea.idea"></textarea>
+<input type="text" class="input-block-level appName" placeholder="Ideas name..." ng-model="idea.name"/>
+
+<div>
+  <accordion close-others="true">
+    <accordion-group class="well well-small ideaOption" id="theMarket">
+    	<accordion-heading>
+            The Market<i class="icon-plus-sign icon-white pull-right"></i>
+        </accordion-heading>
+      <input type="text" placeholder="Target Market" class="input-block-level collapse-input" ng-model="idea.audience"/>
+      <hr />
+      <input type="text" placeholder="Competition" class="input-block-level collapse-input" ng-model="idea.competition"/>
+      <hr />
+      <input type="text" placeholder="Competitive Advantage" class="input-block-level collapse-input" ng-model="idea.advantage"/>
+    </accordion-group>
+
+    <accordion-group class="well well-small ideaOption" id="theProduct">
+    	<accordion-heading>
+            The Product<i class="icon-plus-sign icon-white pull-right"></i>
+        </accordion-heading>
+      <input type="text" placeholder="Use Cases" class="input-block-level collapse-input" ng-model="idea.useCases"/>
+      <hr />
+      <input type="text" placeholder="Competition" class="input-block-level collapse-input" />
+    </accordion-group>
+
+    <accordion-group class="well well-small ideaOption" id="businessModel">
+    	<accordion-heading>
+            Business Model<i class="icon-plus-sign icon-white pull-right"></i>
+        </accordion-heading>
+      <input type="text" placeholder="Target Audience" class="input-block-level collapse-input" />
+      <hr />
+      <input type="text" placeholder="Competition" class="input-block-level collapse-input" />
+    </accordion-group>
+
+    <accordion-group class="well well-small ideaOption" id="execution">
+      <accordion-heading>
+            Execution<i class="icon-plus-sign icon-white pull-right"></i>
+        </accordion-heading>
+      <input type="text" placeholder="Target Audience" class="input-block-level collapse-input" />
+      <hr />
+      <input type="text" placeholder="Competition" class="input-block-level collapse-input" />
+    </accordion-group>
+  </accordion>
+</div>
+
+
+<button class="btn btn-large btn-block btn-plain flat-green well-large" type="button" ng-click="saveIdea()">Save Idea</button>

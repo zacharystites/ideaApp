@@ -1,0 +1,7 @@
+<form class="form-container" name="signupForm">
+    <input type="text" class="input-block-level" placeholder="email" ng-model="user.email">
+    <input type="password" class="input-block-level" placeholder="password" ng-model="user.password" name="password">
+    <input type="password" class="input-block-level" placeholder="confirm password" ng-change="validatePassword()" ng-model="user.confirm" name="confirm">
+    <p class="terms">By pressing "Sign Up" you are agreeing to our terms and services</p>
+    <input class="btn btn-large btn-block flat-green" type="submit" value="Sign up" ng-click="signup()"/>
+</form>

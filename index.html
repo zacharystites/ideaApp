@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="idealy">
+	<head>
+		<title>Idealy</title>
+
+		<!-- Site JavaScript -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		<script src="inc/js/angularFire.js"></script>
+		<script type='text/javascript' src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+		<script type="text/javascript" src="inc/js/ui-bootstrap-custom-tpls-0.5.0.js"></script>
+		
+		<!-- CSS Libs -->
+		<link href="inc/css/bootstrap.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link href="inc/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
+		<link href="inc/css/main.css" rel="stylesheet">
+	</head>
+	<body>
+	    	<div class="navbar">
+			    <div class="navbar-inner flat-green">
+				    <a class="brand" href="#">idealy</a>
+				    <ul class="nav pull-right" ng-controller="user">
+					    <li><a href="#/login" ng-hide="user" ng-class="{notactive: location.path() == '/login'}">Log in</a></li>
+					    <li><a href="#/" ng-hide="user" ng-class="{notactive: location.path() == '/'}">Sign up</a></li>   
+					    <li><a href="#/login" ng-show="user" ng-click="signout()">Sign out</a></li>
+				    </ul>
+			    </div>
+		    </div>
+	    	<div class="app-container">
+		    <div class="main-content">
+		    	<div ng-view=""></div>
+			</div>
+		</div>
+		<script src="inc/js/main.js?v1=1"></script>
+	</body>
+</html>
