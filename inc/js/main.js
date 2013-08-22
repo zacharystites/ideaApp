@@ -30,6 +30,11 @@ idealy.config(function($routeProvider){
 
 });
 
+idealy.controller("Core", ['$scope', '$location', function($scope, $location){
+	$scope.location = $location;
+	$scope.bodyClass='img_background';
+}]);
+
 idealy.controller("user",['$scope', 'angularFireAuth',"$location", function($scope, angularFireAuth, $location){
 	$scope.location = $location;
 	$scope.signup = function(){
@@ -62,11 +67,13 @@ idealy.controller("user",['$scope', 'angularFireAuth',"$location", function($sco
 
 idealy.controller("ideas", ['$scope', 'angularFireCollection', function($scope, angularFireCollection){
 	var url="https://idea-app.firebaseio.com/idea";
+	$scope.bodyClass='';
 	$scope.ideas = angularFireCollection(url);
 }]);
 
 idealy.controller("idea", ['$scope', 'angularFireCollection', '$rootScope', '$routeParams', function($scope, angularFireCollection, $rootScope, $routeParams){
 	var url="https://idea-app.firebaseio.com/idea";
+	$scope.bodyClass='';
 	var collection = angularFireCollection(url,function(data)
 		{
 			if($routeParams.projectId)
@@ -77,6 +84,7 @@ idealy.controller("idea", ['$scope', 'angularFireCollection', '$rootScope', '$ro
 			
 		});
 	$scope.saveIdea = function(){
+		$scope.bodyClass='';
 		$scope.idea.userId = $rootScope.user.id;
 		$scope.idea.createdDate = new Date().getTime();
 		collection.add($scope.idea);

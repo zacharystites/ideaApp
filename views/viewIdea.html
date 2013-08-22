@@ -1,11 +1,16 @@
-<div class="well">
+<div class="main-content">
 	<h1>{{idea.name}}</h1>
 	<small class="createdate">{{idea.createdDate | date:'medium'}}</small>
 	<p>{{idea.idea}}</p>
+<div>
+	<accordion close-others="true">
+		<accordion-group class="well well-small ideaOption flat-red">
+		<accordion-heading>
+			My market
+		</accordion-heading>
+			<h6>{{idea.audience}}</h6>
+			<h6>{{idea.competition}}</h6>
+		</div>
+	</accordion
 </div>
-<div class="well">
-	<p>{{idea.audience}}</p>
-	<p>{{idea.competition}}</p>
 </div>
-
-

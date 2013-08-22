@@ -1,3 +1,5 @@
-<a href="#/idea" class="btn btn-large flat-green input-large btn-plain">Create New Idea</a>
-<a href="#/idea/{{idea.$id}}" class="input-large well ideaTab" ng-repeat="idea in ideas | filter:{userId: user.id}">{{ idea.name }}<i class="icon-chevron-right pull-right"></i></a>
-
+<div class="main-content">
+<a href="#/idea" class="btn btn-large btn-primary input-large btn-plain">Create New Idea</a>
+<a href="#/idea/{{idea.$id}}" class="input-large well well-small ideaTab" ng-repeat="idea in ideas | filter:{workId: work.id}"><div class="clearfix"><div class="ideaTitle pull-left">{{ idea.name }}</div>
+<i class="icon-chevron-right pull-right"></i></div></a>
+</div>

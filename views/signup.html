@@ -1,7 +1,12 @@
+<div class="main-content">
+	<h1 class="backdropTitle">Hello,</h1>
+	<p class="backdropParagraph">easily manage all of your ideas in one place.</p>
 <form class="form-container" name="signupForm">
-    <input type="text" class="input-block-level" placeholder="email" ng-model="user.email">
-    <input type="password" class="input-block-level" placeholder="password" ng-model="user.password" name="password">
-    <input type="password" class="input-block-level" placeholder="confirm password" ng-change="validatePassword()" ng-model="user.confirm" name="confirm">
-    <p class="terms">By pressing "Sign Up" you are agreeing to our terms and services</p>
-    <input class="btn btn-large btn-block flat-green" type="submit" value="Sign up" ng-click="signup()"/>
-</form>
+    <input type="text" class="input-block-level backdropInputs" placeholder="email" ng-model="user.email">
+    <input type="password" class="input-block-level backdropInputs" placeholder="password" ng-model="user.password" name="password">
+    <input type="password" class="input-block-level backdropInputs" placeholder="confirm password" ng-change="validatePassword()" ng-model="user.confirm" name="confirm">
+   
+ 	<input class="btn btn-large btn-block btn-primary" type="submit" value="sign up" ng-click="signup()"/>
+ 	<p class="terms">already have an account? <a class="termsLink" href="#/login">log in</a></p>
+ </form>
+</div>

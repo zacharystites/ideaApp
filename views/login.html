@@ -1,5 +1,10 @@
-<form class="form-container" name="loginForm">
-    <input type="text" class="input-block-level" placeholder="email" ng-model="user.email">
-    <input type="password" class="input-block-level" placeholder="password" ng-model="user.password" name="password">
-    <input class="btn btn-large btn-block flat-green" type="submit" value="Log in" ng-click="login()"/>
-</form>
+<div class="main-content">
+	<h1 class="backdropTitle">Hey,</h1>
+	<p class="backdropParagraph">it's nice to see you again.</p>
+	<form class="form-container" name="loginForm">
+	    <input type="text" class="input-block-level backdropInputs" placeholder="email" ng-model="user.email">
+	    <input type="password" class="input-block-level backdropInputs" placeholder="password" ng-model="user.password" name="password">
+	    <input class="btn btn-large btn-block btn-primary" type="submit" value="log in" ng-click="login()"/>
+	    <p class="terms">don't have an account? <a class="termsLink" href="#/">sign up</a></p>
+	</form>
+</div>

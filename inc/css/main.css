@@ -1,8 +1,14 @@
+html {
+	height:100%;
+	padding:0;
+	margin:0;
+}
 body {
 	font-family: 'Helvetica Neue', serif;
 	margin:0;
 	padding:0;
-	background-color:#E2E2DB;
+	background-color:#EBEBEB;
+	height:100%;
 }
 .navbar-inner {
 	border-radius: 0;
@@ -17,9 +23,14 @@ input[type="text"], input[type="password"] {
 	margin-top:5px;
 }
 .terms {
-	color:#666;
-	font-size: 10px;
+	color:#fff;
+	margin:10px 0;
 	line-height: 12px;
+}
+.termsLink {
+	font-weight: 900;
+	color:#FFF;
+	text-decoration: underline;
 }
 .app-container {
 	width:90%;
@@ -44,17 +55,18 @@ input[type="text"], input[type="password"] {
 	text-shadow:0 2px 0 #00A187;
 	font-weight: 300;
 }
+.navbar {
+	display:none;
+}
 .btn {
 	border-radius:2px;
 	color:#fff;
 	text-shadow:none;
 }
-.btn-large:hover {
-	background-color: #57C69E;
-}
 .btn-large {
 	font-size: 15px;
 	padding:5px;
+	background:;
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input { 
@@ -68,22 +80,22 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	font-weight: 900;
 }
 #theMarket .accordion-heading {
-	background-color:#EA4740;
+	background-color:#AB5ACE;
 }
 #theProduct .accordion-heading {
-	background-color:#F49A36;
+	background-color:#B0CC7C;
 }
 #businessModel .accordion-heading {
-	background-color:#3299D6;
+	background-color:#E9434A;
 }
 #execution .accordion-heading {
-	background-color: #34495C;
+	background-color: #39ADDD;
 }
 .collapse {
 	color:#999;
 }
 
-.btn-plain {
+.btn-primary {
 	margin:10px 0;
 	font-weight: 600;
 	color:#fff;
@@ -150,4 +162,53 @@ hr {
 	margin:0;
 	border:none;
 	border-top:1px dotted #ccc;
+}
+.img_background {
+	width:100%;
+	height:100%;
+	background: url('../img/sunrise.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.blurred_background {
+	width:100%;
+	height:100%;
+	background: url('../img/blurred_sunrise.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.main-content {
+	padding:20px 0;
+}
+.form-container {
+	border-radius: 4px;
+}
+input[type="text"].backdropInputs, input[type="password"].backdropInputs {
+	box-shadow:none;
+	border: none;
+	margin-bottom:4px;
+	background-color: rgba(255, 255, 255, .8);
+	color:#333;
+}
+.backdropTitle, .backdropParagraph {
+	color:#fff;
+}
+.backdropTitle {
+	margin-top: 0;
+}
+.backdropParagraph {
+	font-size: 18px;
+	text-shadow:0 1px 0 #555;
+	margin-bottom: 15px;
+}
+.btn-plain {
+	margin-top: 0;
+}
+.ideaTitle {
+	font-weight:100;
+	font-size: 16px;
 }
