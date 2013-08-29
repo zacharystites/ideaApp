@@ -20,8 +20,7 @@
 	</head>
 	<body ng-controller="Core">
 		<div id="backdrop" ng-class="{img_background: location.path() == '/' || location.path() == '/login'}"/>
-	    	<div class="app-container">
-			    <div ng-view=""></div>
+	    	<div class="app-container" ng-view="">
 			</div>
 		</div>
 		<script src="inc/js/main.js?v1=1"></script>

@@ -1,10 +1,10 @@
 <div class="main-content">
-	<h1 class="backdropTitle">Hey,</h1>
-	<p class="backdropParagraph">it's nice to see you again.</p>
+	<h3 class="backdropTitle">Welcome back,</h3>
+	<p class="backdropParagraph">It's good to see you, please login below</p>
 	<form class="form-container" name="loginForm">
-	    <input type="text" class="input-block-level backdropInputs" placeholder="email" ng-model="user.email">
+	    <input type="text" id="prependedInput" class="input-block-level backdropInputs" placeholder="email" ng-model="user.email"/>
 	    <input type="password" class="input-block-level backdropInputs" placeholder="password" ng-model="user.password" name="password">
-	    <input class="btn btn-large btn-block btn-primary" type="submit" value="log in" ng-click="login()"/>
+	    <input class="btn btn-large btn-block flat-navy" type="submit" value="{{logintext}}" ng-click="login()"/>
 	    <p class="terms">don't have an account? <a class="termsLink" href="#/">sign up</a></p>
-	</form>
+	</form> 
 </div>

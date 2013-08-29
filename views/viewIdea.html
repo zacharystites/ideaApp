@@ -1,16 +1,40 @@
 <div class="main-content">
+	<a href="#/idea/edit/{{idea.$id}}" class="label label-important editBtn"> Edit </a>
+	<div class="well">
+
 	<h1>{{idea.name}}</h1>
 	<small class="createdate">{{idea.createdDate | date:'medium'}}</small>
 	<p>{{idea.idea}}</p>
+</div>
 <div>
-	<accordion close-others="true">
-		<accordion-group class="well well-small ideaOption flat-red">
-		<accordion-heading>
-			My market
-		</accordion-heading>
-			<h6>{{idea.audience}}</h6>
-			<h6>{{idea.competition}}</h6>
-		</div>
-	</accordion
+	<div class="well well">
+		<h4 class="viewIdeaTitle">Target Audience</h4>
+		<p class="input-block-level collapse-input">{{idea.audience}}</p>
+
+		<h4 class="viewIdeaTitle">Competition</h4>
+		<p class="input-block-level collapse-input">{{idea.competition}}</p>
+		<h4 class="viewIdeaTitle">Competitive Advantage</h4>
+		<p class="input-block-level collapse-input">{{idea.advantage}}</p>
+	</div>
+	<div class="well">
+		<h4 class="viewIdeaTitle">Use Cases</h4>
+		<p class="input-block-level collapse-input">{{idea.useCase}}</p>
+		<h4 class="viewIdeaTitle">Features</h4>
+		<p class="input-block-level collapse-input">{{idea.features}}</p>	
+	</div>
+	<div class="well">
+		<h4 class="viewIdeaTitle">Monetization</h4>
+		<p class="input-block-level collapse-input">{{idea.monetize}}</p>
+		<h4 class="viewIdeaTitle">Distribution</h4>
+		<p class="input-block-level collapse-input">{{idea.distribution}}</p>
+	</div>	
+	<div class="well">
+		<h4 class="viewIdeaTitle">Key People</h4>
+		<p class="input-block-level collapse-input">{{idea.people}}</p>
+		<h4 class="viewIdeaTitle">Milestones</h4>
+		<p class="input-block-level collapse-input">{{idea.milestones}}</p>
+		<h4 class="viewIdeaTitle">Next steps</h4>
+		<p class="input-block-level collapse-input">{{idea.next}}</p>
+	</div>
 </div>
 </div>

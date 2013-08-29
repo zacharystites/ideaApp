@@ -1,7 +1,7 @@
 <div class="main-content">
-<textarea placeholder="Your idea.." class="input-large" rows="3" ng-model="idea.idea"></textarea>
-<input type="text" class="input-block-level appName" placeholder="Ideas name..." ng-model="idea.name"/>
-
+<textarea placeholder="Whats your idea?" class="input-large" rows="3" ng-model="idea.idea"></textarea>
+<input type="text" class="input-block-level appName" placeholder="What should we call it?" ng-model="idea.name"/>
+<select ng-model="idea.industry"><option value="default">Industry</option><option value="eCommerce">E-Commerce</option><option value="finance">Finance</option><option value="health">Health</option><option value="food">Food</option><option value="webApp">Web Application</option><option value="phoneApp">Phone Application</option></select>
 <div>
   <accordion close-others="true">
     <accordion-group class="well well-small ideaOption" id="theMarket">
@@ -19,31 +19,32 @@
     	<accordion-heading>
             The Product<i class="icon-plus-sign icon-white pull-right"></i>
         </accordion-heading>
-      <input type="text" placeholder="Use Cases" class="input-block-level collapse-input" ng-model="idea.useCases"/>
+      <input type="text" placeholder="Use Cases" class="input-block-level collapse-input" ng-model="idea.useCase"/>
       <hr />
-      <input type="text" placeholder="Competition" class="input-block-level collapse-input" />
+      <input type="text" placeholder="Product Features" class="input-block-level collapse-input" ng-model="idea.features"/>
     </accordion-group>
 
     <accordion-group class="well well-small ideaOption" id="businessModel">
     	<accordion-heading>
             Business Model<i class="icon-plus-sign icon-white pull-right"></i>
         </accordion-heading>
-      <input type="text" placeholder="Target Audience" class="input-block-level collapse-input" />
+      <input type="text" placeholder="Monetization" class="input-block-level collapse-input" ng-model="idea.monetize" />
       <hr />
-      <input type="text" placeholder="Competition" class="input-block-level collapse-input" />
+      <input type="text" placeholder="Distribution" class="input-block-level collapse-input" ng-model="idea.distribution"/>
     </accordion-group>
 
     <accordion-group class="well well-small ideaOption" id="execution">
       <accordion-heading>
             Execution<i class="icon-plus-sign icon-white pull-right"></i>
         </accordion-heading>
-      <input type="text" placeholder="Target Audience" class="input-block-level collapse-input" />
+      <input type="text" placeholder="Key People" class="input-block-level collapse-input" ng-model="idea.people"/>
       <hr />
-      <input type="text" placeholder="Competition" class="input-block-level collapse-input" />
+      <input type="text" placeholder="Milestones" class="input-block-level collapse-input" ng-model="idea.milestones"/>
+       <input type="text" placeholder="Next Steps" class="input-block-level collapse-input" ng-model="idea.next"/>
     </accordion-group>
   </accordion>
 </div>
 
 
-<button class="btn btn-large btn-block btn-plain btn-primary well-large" type="button" ng-click="saveIdea()">Save Idea</button>
+<button class="btn btn-large btn-block btn-plain green well-large" type="button" ng-click="saveIdea()">Save Idea</button>
 </div>

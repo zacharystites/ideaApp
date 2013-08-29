@@ -1,5 +1,18 @@
-<div class="main-content">
-<a href="#/idea" class="btn btn-large btn-primary input-large btn-plain">Create New Idea</a>
-<a href="#/idea/{{idea.$id}}" class="input-large well well-small ideaTab" ng-repeat="idea in ideas | filter:{workId: work.id}"><div class="clearfix"><div class="ideaTitle pull-left">{{ idea.name }}</div>
-<i class="icon-chevron-right pull-right"></i></div></a>
+<!-- <div class="fix-btn-top background-blue">
+	
+</div> -->
+<div class="main-dash-content">
+	<div class="clearfix"></div>
+		<a class="ideaTab img-rounded {{idea.industry}}" ng-repeat="idea in ideas | filter:{userId: user.id}" ng-click="viewIdea(idea.$id)" >
+			<div class="clearfix">
+				<i class="{{icons[idea.industry]}} icon-white displayIcons"></i>
+				<div class="ideaTitle pull-left">{{ idea.name }}</div>
+			</div>
+			<img src="./inc/img/remove.png" class="deleteIcon" ng-click="deleteIdea(idea.$id,$event)" ng-show="deleteStatus.state" alt="X"/>
+		</a>
+	<div class="clearfix"></div>
+</div>
+<div class="fix-btn-bottom">
+	<div class="btn btn-large flat-grey input-large btn-plain newIdeaBtn" ng-click="deleteStatus()"><i class="icon-trash icon-white footerIcons" ></i></div>
+	<a href="#/idea/new" class="btn btn-large flat-green input-large btn-plain newIdeaBtn"><i class="icon-plus-sign icon-white footerIcons"></i></a>
 </div>
